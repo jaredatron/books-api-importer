@@ -1,0 +1,20 @@
+{
+  "name": "books-api-importer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "books2json.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^2.0.0"
+  },
+  "dependencies": {
+    "request": "^2.74.0",
+    "request-promise": "^4.1.1",
+    "csv-write-stream": "^2.0.0",
+    "faker": "^3.1.0"
+  }
+}
