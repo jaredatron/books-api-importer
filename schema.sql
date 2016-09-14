@@ -16,9 +16,27 @@ CREATE TABLE authors (
   name VARCHAR(255) NOT NULL
 );
 
+CREATE UNIQUE INDEX author_name ON authors (name);
+
 DROP TABLE IF EXISTS book_authors;
 
 CREATE TABLE book_authors (
   book_id INTEGER NOT NULL,
   author_id INTEGER NOT NULL
+);
+
+DROP TABLE IF EXISTS genres;
+
+CREATE TABLE genres(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255)
+);
+
+CREATE UNIQUE INDEX genre_name ON genres (name);
+
+DROP TABLE IF EXISTS book_genres;
+
+CREATE TABLE book_genres (
+  book_id INTEGER NOT NULL,
+  genre_id INTEGER NOT NULL
 );
